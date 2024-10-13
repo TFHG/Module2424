@@ -1,0 +1,14 @@
+{
+  "name": "ci",
+  "version": "1.0.0",
+  "description": "Continuous Integration ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Willem Yu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
