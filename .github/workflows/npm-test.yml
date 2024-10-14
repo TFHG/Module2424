@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main  # Adjust the branch you want to trigger the workflow on (e.g., main)
+  pull_request:
+    branches:
+      - main  # Add this if you also want to run tests on pull requests
+
 
 jobs:
   test:
