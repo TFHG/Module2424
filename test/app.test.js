@@ -1,10 +1,10 @@
 const request = require('supertest');
-const app = require('../app'); // Import the Express app instance
+const app = require('../app'); // Import the Express app
 
 describe('GET /', () => {
-    it('should return Hello World', async () => {
-        const res = await request(app).get('/');  // Supertest will run the app without needing app.listen()
-        expect(res.text).toBe('Hello World');  // Expecting the correct response
-        expect(res.statusCode).toBe(200);  // Ensure that the response is 200 OK
+    it('should serve the Hello World HTML page', async () => {
+        const res = await request(app).get('/'); // Simulate GET request to the root URL
+        expect(res.statusCode).toBe(200); // Expect status code 200 (OK)
+        expect(res.text).toContain('<h1>Hi World</h1>'); // Check if HTML contains 'Hello World'
     });
 });
